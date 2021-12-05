@@ -71,3 +71,18 @@ django-admin startporject --template <path or URI> <project_name> .
 
 # Working example
 django-admin startproject --template https://github.com/pawelkonior/django_template/archive/master.zip new_latest_proj .
+
+```
+
+## New functionality algorithm 
+1. New django-app (```bash python manage.py startapp <app-name>```
+2. Django Models (models.py)
+3. Add app to INSTALLED_APP (settings.py)
+4. Migrations (```bash py manage.py makemigrations <app-name>```, ```bash py manage.py migrate <app-name>```)
+5. Add models to CMS (content management system) (admin.py)
+6. Add custom data using shell (```bash py manage.py shell```
+7. Django forms
+8. Views (Logic, views.py)
+9. Django Templates (templates/<app-name>/<template-name.html>)
+10. Router (local urls.py -> urlspattern, global urls.py)
+11. PROFIT !!!
