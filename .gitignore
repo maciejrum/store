@@ -1,4 +1,11 @@
 .idea
 *.pyc 
+<<<<<<< HEAD
 db.sqlite3
 venv1
+=======
+media
+db.sqlite3
+venv1
+
+.DS_Store

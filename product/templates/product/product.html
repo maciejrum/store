@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+    <p class="nav-item">
+        <a class="btn-light" href="{% url 'product:product_list' %}"><img
+                src="{% static 'images/arrow_left_icon.svg' %}" alt="" width="30" height="24"
+                class="d-inline-block align-text-top"></a>
+    </p>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="/media/{{ product.images.first }}" class="img-fluid rounded-start" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                    <p class="card-text"><small class="text-muted">Price: {{ product.price }}</small></p>
+                    <p class="card-text"><small class="text-muted">Stock Count: {{ product.stock_count }}</small></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
