@@ -1,7 +1,11 @@
 """config URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
+<<<<<<< HEAD
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
+=======
+    https://docs.djangoproject.com/en/3.0/topics/http/urls/
+>>>>>>> ST-001_home_view
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -15,7 +19,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+<<<<<<< HEAD
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+=======
+from home.views import home
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', home, name='home'),
+>>>>>>> ST-001_home_view
 ]
