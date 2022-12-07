@@ -17,7 +17,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+
 from django.contrib import admin
+<<<<<<< HEAD
 from django.urls import path
 <<<<<<< HEAD
 
@@ -30,4 +33,16 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
 >>>>>>> ST-001_home_view
+=======
+from django.urls import path, include
+
+from contact.views import contact
+from home.views import home
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('home.urls')),
+    path('kontakt/', include('contact.urls')),
+
+>>>>>>> ST-002_contact_page
 ]

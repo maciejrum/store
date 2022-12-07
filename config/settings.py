@@ -10,12 +10,11 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -50,9 +49,12 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> ST-001_home_view
+=======
+>>>>>>> ST-002_contact_page
 # Application definition
 
 INSTALLED_APPS = [
@@ -63,6 +65,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     # 3rd party
@@ -70,6 +73,14 @@ INSTALLED_APPS = [
     # locals
     'home.apps.HomeConfig',
 >>>>>>> ST-001_home_view
+=======
+
+    # 3rd party
+
+    # local
+    'home.apps.HomeConfig',
+    'contact.apps.ContactConfig',
+>>>>>>> ST-002_contact_page
 ]
 
 MIDDLEWARE = [
@@ -87,8 +98,8 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,  # jesli by bylo False ot by nie znalazl zadnej templatki
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -103,7 +114,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> ST-002_contact_page
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 =======
@@ -118,7 +132,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -147,7 +160,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> ST-002_contact_page
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 =======
@@ -166,11 +182,17 @@ USE_L10N = True
 USE_TZ = True
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> ST-002_contact_page
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
